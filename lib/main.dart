@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'space.dart';
 import 'board.dart';
+import 'solve.dart';
+import 'boardStore.dart';
 
-void main() => runApp(new MyApp());
+
+void main() {
+
+  runApp(new MyApp(
+  ));
+}
 
 class MyApp extends StatelessWidget {
+
   // This widget is the root of your application.
+
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Sudoku Solver',
       theme: new ThemeData(
         // This is the theme of your application.
@@ -23,7 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
-  }
+    }
 }
 
 class MyHomePage extends StatefulWidget {
@@ -58,7 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Board board = new Board();
+  //static BoardStore store = new BoardStore();
+  static Board board = new Board();
 
   @override
   Widget build(BuildContext context) {
@@ -74,11 +84,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: new Text(widget.title),
       ),
-      body: new Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: board
-      ),
+      body: new Column(children: <Widget>[
+        Center(
+            child: board
+        ),
+      ],)
       );
   }
 }

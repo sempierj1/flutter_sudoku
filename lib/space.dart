@@ -1,14 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'boardStore.dart';
 
 class Space extends StatefulWidget {
-  Space({Key key, this.num, this.bottomB, this.topB, this.leftB, this.rightB}) : super(key: key);
+  Space({Key key, this.num, this.bottomB, this.topB, this.leftB, this.rightB, this.x, this.y, this.hint, this.store}) : super(key: key);
 
   final int num;
   final int leftB;
   final int rightB;
   final int topB;
   final int bottomB;
+  final int x;
+  final int y;
+  final bool hint;
+  final BoardStore store;
 
   @override
   _Space createState() => new _Space();
@@ -17,22 +22,15 @@ class Space extends StatefulWidget {
 class _Space extends State<Space> {
 
   int num = 0;
-
-
+  bool hint = false;
   _Space();
 
   @override
   initState() {
     super.initState();
-    num = 0;
+    num = widget.num;
+    widget.store.updateNum(widget.x, widget.y, num);
   }
-
-  setNum(int n) {
-    setState(() {
-      num = n;
-    });
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +68,9 @@ class _Space extends State<Space> {
                     onTap: () {
                       setState(() {
                         num = 1;
+                        hint = true;
+                        widget.store.updateNum(widget.x, widget.y, num);
+                        widget.store.updateHint(widget.x, widget.y, hint);
                       });
                       Navigator.pop(context);
                     },),),
@@ -82,6 +83,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 2;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),),
@@ -94,6 +98,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 3;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),)
@@ -110,6 +117,9 @@ class _Space extends State<Space> {
                     onTap: () {
                       setState(() {
                         num = 4;
+                        hint = true;
+                        widget.store.updateNum(widget.x, widget.y, num);
+                        widget.store.updateHint(widget.x, widget.y, hint);
                       });
                       Navigator.pop(context);
                     },),),
@@ -122,6 +132,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 5;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),),
@@ -134,6 +147,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 6;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),)
@@ -150,6 +166,9 @@ class _Space extends State<Space> {
                     onTap: () {
                       setState(() {
                         num = 7;
+                        hint = true;
+                        widget.store.updateNum(widget.x, widget.y, num);
+                        widget.store.updateHint(widget.x, widget.y, hint);
                       });
                       Navigator.pop(context);
                     },),),
@@ -162,6 +181,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 8;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),),
@@ -174,6 +196,9 @@ class _Space extends State<Space> {
                       onTap: () {
                         setState(() {
                           num = 9;
+                          hint = true;
+                          widget.store.updateNum(widget.x, widget.y, num);
+                          widget.store.updateHint(widget.x, widget.y, hint);
                         });
                         Navigator.pop(context);
                       }),)
