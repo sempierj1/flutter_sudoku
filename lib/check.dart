@@ -1,26 +1,26 @@
 import 'dart:developer';
 
 class Check {
-  List board;
   int checkNum;
   int startX;
   int startY;
   List numsSquare = new List();
 
 
-  Check(List b) {
-    board = b;
-  }
+  Check();
 
-  checkSpace(int x, int y) {
+  checkSpace(List board, int x, int y) {
     checkNum = board[y][x].num;
+    //print(checkNum.toString() + " CHECKNUM");
     for (int i = 0; i < 9; i++) {
       if (board[i][x].num == checkNum && i != y) {
+       //print("FAILED IN COL");
         return false;
       }
     }
     for (int j = 0; j < 9; j++) {
       if (board[y][j].num == checkNum && j != x) {
+        //print("FAILED IN ROW");
         return false;
       }
     }
@@ -88,12 +88,18 @@ class Check {
     } else {
       startY = 6;
     }
+
     numsSquare.clear();
     for(int i = startY; i < startY + 3; i++)
       {
         for(int j = startX; j < startX + 3; j++)
           {
-            if(numsSquare.contains(checkNum))
+            if(board[i][j].num == checkNum && (i != y && j!= x))
+              {
+                //print("FAILED IN SQUARE");
+                return false;
+              }
+            /*if(numsSquare.contains(checkNum))
               {
                 print(numsSquare);
                 print(checkNum.toString());
@@ -104,7 +110,7 @@ class Check {
               else {
                 numsSquare.add(board[i][j].num);
               }
-            }
+            }*/
           }
       }
       return true;

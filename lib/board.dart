@@ -55,7 +55,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -186,6 +186,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color: Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][0].num = 0;
+                                board[index][0].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -212,7 +227,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -342,6 +357,22 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][1].num = 0;
+                                board[index][1].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
+
                     ]),),)
               );
             })),
@@ -368,7 +399,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -498,6 +529,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][2].num = 0;
+                                board[index][2].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -524,7 +570,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -654,6 +700,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][3].num = 0;
+                                board[index][3].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -680,7 +741,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -810,6 +871,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][4].num = 0;
+                                board[index][4].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -836,7 +912,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -966,6 +1042,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][5].num = 0;
+                                board[index][5].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -992,7 +1083,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -1122,6 +1213,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][6].num = 0;
+                                board[index][6].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -1148,7 +1254,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -1278,6 +1384,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][7].num = 0;
+                                board[index][7].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
@@ -1304,7 +1425,7 @@ class _Board extends State<Board> {
                   barrierDismissible: true,
                   builder: (BuildContext context) =>
                   new AlertDialog(
-                    content: Container(alignment: Alignment.center, height: 180.0, width: 180.0, child: Column(children: <Widget>[
+                    content: Container(alignment: Alignment.center, height: 280.0, width: 180.0, child: Column(children: <Widget>[
                       Row(children: <Widget>[
                         Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
                           height: 60.0,
@@ -1434,6 +1555,21 @@ class _Board extends State<Board> {
                       ],
 
                       ),
+                      Row(children: <Widget>[
+                        Expanded(child: GestureDetector(child: Container(alignment: Alignment.center, width: 60.0,
+                          height: 60.0,
+                          child: Text("Clear"),
+                          decoration: BoxDecoration(
+                              color:  Colors.transparent,
+                              border: Border.all(width: .5, color: Colors.black)),),
+                            onTap: () {
+                              setState(() {
+                                board[index][8].num = 0;
+                                board[index][8].hint = false;
+                              });
+                              Navigator.pop(context);
+                            }),)
+                      ],)
                     ]),),)
               );
             })),
